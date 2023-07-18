@@ -36,3 +36,41 @@
         </tr>
     </tbody>
 </table>
+<p>--------------------------------</p>
+<table>
+    <br>
+    <span *ngIf="listadoContactosFire.length == 0">
+        No existen contactos
+    </span>
+    <thead>
+        <tr>
+            <th>Cedula</th>
+            <th>Nombre</th>
+            <th>Direccion</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let contacto of lisatdoContactosWS |async">
+            <td>{{contacto.cedulaPer}}</td>
+            <td>{{contacto.nombrePer}}</td>
+            <td>{{contacto.direccionPer}}</td>
+            <td>
+                <button mat-fab color="accent" 
+                    (click)="editar(contacto)">
+                    <mat-icon>create</mat-icon>
+                </button>
+            </td>
+
+            <td>
+                <button mat-fab color="warn" 
+                    (click)="eliminar($event, contacto)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+
+            </td>
+
+        </tr>
+    </tbody>
+</table>

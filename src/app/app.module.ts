@@ -25,6 +25,7 @@ import { ProductoComponent } from './pages/producto/producto.component';
 import { ListProductosComponent } from './pages/list-productos/list-productos.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -54,6 +55,7 @@ import {MatIconModule} from '@angular/material/icon';
     MatIconModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
+    HttpClientModule,
   ],
   providers: [
     {provide: FIREBASE_OPTIONS, useValue: environment.firebase},],

@@ -20,7 +20,7 @@ export class ContactoService {
 
   save(contacto: Contacto) {
     this.contactos.push(contacto)
-    contacto.uid = this.db.createId()
+    //contacto.uid = this.db.createId()
     console.log(this.contactos)
     this.create(contacto)
   }
@@ -33,11 +33,14 @@ export class ContactoService {
     return this.contactosRef.valueChanges();
   }
   create(contacto: Contacto): any {
-    return this.contactosRef.doc(contacto.uid).set({ ...contacto });
+    //return this.contactosRef.doc(contacto.uid).set({ ...contacto });
   }
 
   editar(contacto: Contacto): any {
-    return this.contactosRef.doc(contacto.uid).update(contacto);
+   // return this.contactosRef.doc(contacto.uid).update(contacto);
+   this.contactos.push(contacto)
+   console.log(this.contactos)
+    this.create(contacto)
   }
 
   delete(id: string): Promise<void> {
