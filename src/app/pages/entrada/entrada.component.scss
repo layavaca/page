@@ -1,0 +1,29 @@
+section {
+    align-items: center;
+    height: 300px;
+}
+
+img {
+    width: 50%;
+    height: 3cm;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 90px;
+    border: none;
+    background-color: #008CBA;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005f6b;
+}
+
+.principal {
+    position: absolute;
+    right: 0;
+}

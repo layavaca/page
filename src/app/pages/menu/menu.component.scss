@@ -1,0 +1,27 @@
+nav {
+    background-color: #5687EB;
+    color: #fff;
+    display: flex;
+}
+
+.menu-vertical {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-vertical li a {
+    display: block;
+    padding: 30px;
+    text-decoration: none;
+    color: #333;
+}
+
+.menu-vertical li a:hover {
+    background-color: #eee;
+}
+
+.menu {
+    position: absolute;
+    left: 0;
+}

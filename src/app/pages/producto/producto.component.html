@@ -1,0 +1,22 @@
+<p>Producto Nuevo</p>
+
+<mat-form-field class="example-full-width">
+    <mat-label>Nombre</mat-label>
+    <input matInput placeholder="Caramelo" id="txtNombre" [(ngModel)]="producto.nombre">
+</mat-form-field>
+<br />
+<mat-form-field class="example-full-width">
+    <mat-label>Precio:</mat-label>
+    <input matInput placeholder="10.00" id="txtValor" [(ngModel)]="producto.precio">
+</mat-form-field>
+<br />
+<mat-form-field class="example-full-width">
+    <mat-label>Cantidad:</mat-label>
+    <input matInput placeholder="01" id="txtCantidad" [(ngModel)]="producto.cantidad">
+</mat-form-field>
+
+<br />
+<br />
+
+<button (click)="guardar()">Guardar</button>
+<button (click)="Edita2()">Editar</button>

@@ -1,0 +1,23 @@
+body {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmk4t4wzxwK0SEAyS5ekHSyUHCIK7aTo0TKw&usqp=CAU');
+    background-size: cover;
+    position: relative;
+}
+
+section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.teoria {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}

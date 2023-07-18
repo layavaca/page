@@ -1,0 +1,27 @@
+<p>Listado de Productos</p><table>
+    <br>
+<span *ngIf="listadoProductosFire.length == 0">
+    No existen Productos
+</span>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let producto of listadoProductosFire |async">
+            <td>{{producto.nombre}}</td>
+            <td>{{producto.cantidad}}</td>
+            <td>{{producto.precio}}</td>
+            <td><a (click)="editar(producto)">Editar</a></td>
+            <td><a (click)="eliminar($event, producto)">Eliminar</a></td>
+        </tr>
+    </tbody>
+</table>
+
+<br/>
+<br/>

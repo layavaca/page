@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "demo62contacto": {
+      "hosting": {
+        "Page": [
+          "demo62contacto"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "demo62contacto"
+  }
+}

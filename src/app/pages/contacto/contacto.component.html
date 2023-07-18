@@ -1,0 +1,21 @@
+<p>Contacto Nuevo</p>
+<mat-form-field class="example-full-width">
+    <mat-label>Cédula:</mat-label>
+    <input matInput placeholder="0101010101" id="txtCedula" [(ngModel)]="contacto.cedula">
+</mat-form-field>
+<br/>
+<mat-form-field class="example-full-width">
+    <mat-label>Nombre</mat-label>
+    <input matInput placeholder="Marcelo" id="txtNombre" [(ngModel)]="contacto.nombre">
+</mat-form-field>
+<br/>
+<mat-form-field class="example-full-width">
+    <mat-label>Direccion:</mat-label>
+    <input matInput placeholder="San Blas" id="txtDireccion" [(ngModel)]="contacto.direccion">
+</mat-form-field>
+
+<br/>
+<br/>
+
+<button (click)="guardar()">Guardar</button>
+<button (click)="Edita2()">Editar</button>

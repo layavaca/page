@@ -1,0 +1,38 @@
+<p>Listado de Contactos</p>
+<table>
+    <br>
+    <span *ngIf="listadoContactosFire.length == 0">
+        No existen contactos
+    </span>
+    <thead>
+        <tr>
+            <th>Cedula</th>
+            <th>Nombre</th>
+            <th>Direccion</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let contacto of listadoContactosFire |async">
+            <td>{{contacto.cedula}}</td>
+            <td>{{contacto.nombre}}</td>
+            <td>{{contacto.direccion}}</td>
+            <td>
+                <button mat-fab color="accent" 
+                    (click)="editar(contacto)">
+                    <mat-icon>create</mat-icon>
+                </button>
+            </td>
+
+            <td>
+                <button mat-fab color="warn" 
+                    (click)="eliminar($event, contacto)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+
+            </td>
+
+        </tr>
+    </tbody>
+</table>
